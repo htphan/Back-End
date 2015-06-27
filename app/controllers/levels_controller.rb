@@ -1,8 +1,8 @@
 class LevelsController < ApplicationController
 
   def new
-    @level = Level.create(properties: params[:properties])
-    if @post.save
+    @level = Level.new(properties: params[:properties])
+    if @level.save
     render json: { level: @level.as_json(only: [:properties]) },
            status: :created
     else
