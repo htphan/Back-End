@@ -26,6 +26,11 @@ Rails.application.routes.draw do
   #     end
   #   end
 
+  post 'maps/new', to: 'maps#create'
+  get 'maps/budget', to: 'maps#show'
+  get 'maps', to: 'maps#index'
+
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
