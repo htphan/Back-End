@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   post 'consultants/new', to: 'consultants#create'
   get 'consultants', to: 'consultants#index'
   get 'consultant/cost', to: 'consultants#show'
+
+  post 'games/new', to: 'games#create'
+  get 'game/score', to: 'games#score'
+  post 'game/score/update', to: 'games#update'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
