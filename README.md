@@ -8,19 +8,14 @@ Website: https://fierce-wave-2814.herokuapp.com/
 	* [Create Map](#create-map)
 	* [Show Map](#show-map)
 	* [Index](#index)
-3. [Consultant Model](#consultant-model)
-	* [Posts Index](#posts-index)
-	* [Incomplete Posts for a User](#incomplete-posts-for-a-user)
-	* [Show a Post](#show-a-post)
-	* [Show a User's Posts](#show-a-users-posts)
-	* [Create a Post](#create-a-post)
-	* [Delete a Post](#delete-a-post)
-4. [Guess Model](#guess-model)
-	* [Show All Guesses of a Post](#show-all-guesses-of-a-particular-post)
-	* [Show Guesses for a User in a Post](#show-guesses-for-a-user-in-a-particular-post)
-	* [Create a Guess](#create-a-guess)
-	* [Show a Guess](#show-a-guess)
-	* [Delete a Guess](#delete-a-guess)
+2. [Consultant Model](#consultant-model)
+	* [Consultant Index](#consultants-index)
+	* [Consultant cost](#show)
+	* [Create a Consultant](#create-a-consultant)
+3. [Games Model](#games-model)
+	* [Create a Game](#create-a-game)
+	* [Show Game score](#show-game-score)
+	* [Update Game Score](#update-game-score)
 
 ## **Map Model**
 
@@ -32,7 +27,7 @@ POST 'maps/new'
 
 * **Params:** 
 ``` 
-budget
+budget,
 name
 ```
 * **Response**
@@ -69,7 +64,7 @@ name
 ```
 {
   "map": {
-    "budget": null,
+    "budget": 20,000,
     "name": "tucker"
   }
 }
@@ -97,12 +92,12 @@ none
 {
   "map": [
     {
-      "budget": null,
-      "name": "tucker"
+      "budget": 20000,
+      "name": "level one"
     },
     {
       "budget": 100,
-      "name": "tucker"
+      "name": "level twenty"
     }
   ]
 }
