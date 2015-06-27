@@ -1,6 +1,6 @@
 class BlocksController < ApplicationController
 
-  def create
+  def new
     @block = Block.new(x: params[:x],
                        y: params[:y],
                        height: params[:height],
