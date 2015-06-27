@@ -1,6 +1,6 @@
 class MapController < ActiveRecord::Base
   def create
-    @map = Map.find_or_create_by(budget: params[:budget],
+    @map = Map.new(budget: params[:budget],
                                  name: params[:name])
     if @map.save
       render json: { map: @map.as_json(only: [:budget, :name]) },
@@ -22,4 +22,6 @@ class MapController < ActiveRecord::Base
     render json: { map: @map.as_json(only: [:budget, :name]) },
            status: :ok
   end
+
+
 end
