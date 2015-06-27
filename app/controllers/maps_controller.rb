@@ -1,7 +1,7 @@
 class MapsController < ApplicationController
   def create
     @map = Map.new(budget: params[:budget],
-                                 name: params[:name])
+                   name: params[:name])
     if @map.save
       render json: { map: @map.as_json(only: [:budget, :name]) },
              status: :created
