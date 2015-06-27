@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   get 'projects', to: 'projects#index'
 
   post 'maps/new', to: 'maps#create'
-  get 'maps/budget', to: 'maps#show'
+  get 'maps/budget/:name', to: 'maps#show'
   get 'maps', to: 'maps#index'
 
 
