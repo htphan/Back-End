@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post 'game/score/update', to: 'games#update'
 
   #for front end to create a new block in particular map aka level
+  post 'blocks/new', to: 'blocks#new'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
@@ -36,9 +37,19 @@ Rails.application.routes.draw do
   #     end
   #   end
 
+  post 'projects/new', to: 'projects#create'
+  get 'projects/:map_id', to: 'projects#show'
+  get 'projects', to: 'projects#index'
+
   post 'maps/new', to: 'maps#create'
   get 'maps/budget/:name', to: 'maps#show'
   get 'maps', to: 'maps#index'
+
+
+  # ROUTES FOR LEVELS!!!!!!!!!!!!!!!!
+  post 'levels/new', to: 'levels#new'
+  get 'levels/:id', to: 'levels#show'
+  get 'levels', to: 'levels#index'
 
 
   # Example resource route with sub-resources:
