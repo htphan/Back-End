@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get 'game/score', to: 'games#score'
   post 'game/score/update', to: 'games#update'
 
+  #for front end to create a new block in particular map aka level
+  post 'blocks/new', to: 'blocks#new'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
