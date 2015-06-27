@@ -16,8 +16,8 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find(params[:username],
-                      params[:map_id])
+    @game = Game.find_by(username: params[:username],
+                      map_id: params[:map_id])
     if @game
       render json: { game: @game.as_json(only: [:score]) },
     end
