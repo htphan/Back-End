@@ -24,10 +24,11 @@ class GamesController < ApplicationController
   end
 
   def update 
-    @game = Game.find(params[:username],
+    @game = Game.where(params[:username],
                       params[:map_id])
     if @game
-      
+      @game.update(score: params[:score])
+    end
   end
 
 
