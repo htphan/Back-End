@@ -18,8 +18,7 @@ class MapController < ActiveRecord::Base
   end
 
   def show
-    @map = Map.find_by(budget: params[:budget],
-                       name: params[:name])
+    @map = Map.find(params[:budget, :name])
     render json: { map: @map.as_json(only: [:budget, :name]) },
            status: :ok
   end
