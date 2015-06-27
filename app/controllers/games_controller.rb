@@ -15,7 +15,7 @@ class GamesController < ApplicationController
     end
   end
 
-  def show
+  def score
     @game = Game.find_by(username: params[:username],
                       map_id: params[:map_id])
     if @game
