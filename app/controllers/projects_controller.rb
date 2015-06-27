@@ -1,4 +1,4 @@
-class ProjectController< ActiveRecord::Base
+class ProjectsController < ActionController
   def create
     @project = Project.find_or_create_by(value: params[:value],
                                          name: params[:name],
