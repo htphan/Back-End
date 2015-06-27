@@ -11,20 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150627171956) do
+ActiveRecord::Schema.define(version: 20150627212138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "blocks", force: :cascade do |t|
-    t.integer  "height"
-    t.integer  "width"
-    t.integer  "x"
-    t.integer  "y"
-    t.integer  "map_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "consultants", force: :cascade do |t|
     t.integer  "cost"
@@ -44,14 +34,6 @@ ActiveRecord::Schema.define(version: 20150627171956) do
   create_table "maps", force: :cascade do |t|
     t.integer  "budget"
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "projects", force: :cascade do |t|
-    t.integer  "value"
-    t.string   "name"
-    t.integer  "map_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
