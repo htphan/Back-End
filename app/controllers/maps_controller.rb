@@ -1,13 +1,13 @@
-class MapController < ActiveRecord::Base
+class MapsController < ApplicationController
   def create
     @map = Map.new(budget: params[:budget],
                                  name: params[:name])
     if @map.save
       render json: { map: @map.as_json(only: [:budget, :name]) },
              status: :created
-    else
-      render json: { errors: @map.errors.full_messages },
-             status: :unprocessable_entity
+    # else
+    #   render json: { errors: @map.errors.full_messages },
+    #          status: :unprocessable_entity
     end
   end
 
@@ -18,9 +18,11 @@ class MapController < ActiveRecord::Base
   end
 
   def show
-    @map = Map.find(params[:budget, :name])
-    render json: { map: @map.as_json(only: [:budget, :name]) },
-           status: :ok
+    @map = Map.find_by(name: params[:name])
+    if @map
+      render json: { map: @map.as_json(only: [:budget, :name]) },
+             status: :ok
+    end
   end
 
 

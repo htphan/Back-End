@@ -38,7 +38,7 @@ Rails.application.routes.draw do
   #   end
 
   post 'projects/new', to: 'projects#create'
-  get 'projects/:level_id', to: 'projects#show'
+  get 'projects/:map_id', to: 'projects#show'
   get 'projects', to: 'projects#index'
 
   post 'maps/new', to: 'maps#create'

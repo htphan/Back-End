@@ -1,23 +1,25 @@
-class ProjectController< ActiveRecord::Base
+class ProjectsController < ApplicationController
   def create
     @project = Project.find_or_create_by(value: params[:value],
                                          name: params[:name],
-                                         level_id: params[:level_id])
+                                         map_id: params[:map_id])
     if @project.save
-      render json: { project: @project.as_json(only: [:value, :name, :level_id]) },
+      render json: { project: @project.as_json(only: [:value, :name, :map_id]) },
              status: :created
     end
   end
 
   def show
-    @project = Project.find(params[:level_id])
-      render json: { project: @project.as_json(only: [:value, :name, :level_id]) },
+    @project = Project.find_by(params[:level_id])
+    if @project
+      render json: { project: @project.as_json(only: [:value, :name, :map_id]) },
         status: :ok
+    end
   end
 
   def index
     @project = Project.all
-      render json: {project: @project.as_json(only: [:value, :name, :level_id]) },
+      render json: {project: @project.as_json(only: [:value, :name, :map_id]) },
         status: :ok
   end
 end
