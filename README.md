@@ -8,7 +8,7 @@ Website: https://fierce-wave-2814.herokuapp.com/
 	* [Create Map](#create-map)
 	* [Show Map](#show-map)
 	* [Index](#index)
-3. [Post Model](#post-model)
+3. [Consultant Model](#consultant-model)
 	* [Posts Index](#posts-index)
 	* [Incomplete Posts for a User](#incomplete-posts-for-a-user)
 	* [Show a Post](#show-a-post)
