@@ -5,9 +5,9 @@ class MapsController < ApplicationController
     if @map.save
       render json: { map: @map.as_json(only: [:budget, :name]) },
              status: :created
-    # else
-    #   render json: { errors: @map.errors.full_messages },
-    #          status: :unprocessable_entity
+    else
+      render json: { errors: @map.errors.full_messages },
+             status: :unprocessable_entity
     end
   end
 
