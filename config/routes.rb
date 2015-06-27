@@ -2,9 +2,6 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  post 'consultants/new', to: 'consultants#create'
-  get 'consultants', to: 'consultants#index'
-  get 'consultant/cost', to: 'consultants#show'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
@@ -32,6 +29,11 @@ Rails.application.routes.draw do
   post 'maps/new', to: 'maps#create'
   get 'maps/budget', to: 'maps#show'
   get 'maps', to: 'maps#index'
+
+
+  post 'projects/new', to: 'projects#create'
+  get 'projects/:level_id', to: 'projects#show'
+  get 'projects', to: 'projects#index'
 
 
   # Example resource route with sub-resources:
