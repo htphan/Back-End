@@ -28,7 +28,6 @@ class LevelsController < ApplicationController
     @level = Level.all
     render json: { level: @level.as_json(only: [:properties]) },
         status: :ok
-    end
   end
 
 end
