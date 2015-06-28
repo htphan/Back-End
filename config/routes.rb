@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post 'game/score/update', to: 'games#update'
   get 'game/scoreboard', to: 'games#scoreboard'
 
+
   #for front end to create a new block in particular map aka level
   post 'blocks/new', to: 'blocks#new'
 
