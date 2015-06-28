@@ -181,8 +181,8 @@ Path:
 **Parameters** 
 
 Name | Type | Description
---- | ---
-properties | text | **Required.** Includes all attributes of a the game peices (Name, Budget, Map).
+--- | --- | --
+properties | Text | **Required.** Includes all attributes of a the game peices (Name, Budget, Map).
 
 **Status Codes**
 
@@ -269,9 +269,9 @@ Path:
 **Parameters** 
 
 Name | Type | Description
---- | ---
-score | integer | **Required.** Score of a game. 
-username | string | **Required.** Name of user.
+--- | --- | ---
+score | Integer | **Required.** Score of a game. 
+username | String | **Required.** Name of user.
 
 **Status Codes**
 
@@ -334,8 +334,8 @@ Path:
 **Parameters** 
 
 Name | Type | Description
---- | ---
-score | integer | **Required.** Score of a game. 
+--- | --- | ---
+score | Integer | **Required.** Score of a game. 
 
 **Status Codes**
 
