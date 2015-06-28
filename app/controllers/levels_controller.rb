@@ -14,7 +14,8 @@ class LevelsController < ApplicationController
 
   def show
     @level = Level.find(params[:id])
-    render json: @level
+    properties = eval(@level.properties)
+    render json: { level: {id: @level.id, properties: properties} }
   end
 
   def index
