@@ -16,18 +16,21 @@ class GamesController < ApplicationController
   end
 
   def score
-    @game = Game.find_by(username: params[:username],
-                      map_id: params[:map_id])
+    @game = Game.find_by(id: params[:id])
     if @game
       render json: { game: @game.as_json(only: [:score]) }
+    else
+      render json: { errors: "Game not found with specified ID" }, status: :bad_request
     end
   end
 
   def update 
-    @game = Game.where(params[:username],
-                      params[:map_id])
+    @game = Game.find_by(id: params[:id])
     if @game
       @game.update(score: params[:score])
+      render json: @game
+    else
+      render json: { errors: "Game not found with specified ID"}, status: :bad_request
     end
   end
 
