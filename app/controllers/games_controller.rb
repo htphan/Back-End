@@ -26,7 +26,7 @@ class GamesController < ApplicationController
   def scoreboard
     @usernames = Games.all
     game_score = @usernames.order(score: :desc).limit(5)
-    render json: { game: game_score.as_json(only: [:username]) }
+    render json: { game: game_score.as_json(only: [:username, :score]) }
   end
 
   def update 
