@@ -25,9 +25,9 @@ class LevelsController < ApplicationController
   end
 
   def index
-    @level = Level.all
-    render json: { level: @level.as_json(only: [:properties]) },
-        status: :ok
+    @levels = Level.all
+    @properties = @levels.map { |x| {id: x.id, properties: eval(x.properties)}}
+    render 'index.json.jbuilder'
   end
 
 end
