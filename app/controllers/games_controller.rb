@@ -23,6 +23,11 @@ class GamesController < ApplicationController
     end
   end
 
+  def scoreboard
+    @usernames = Games.all
+    @usernames.order(score: :desc).limit(5)
+  end
+
   def update 
     @game = Game.where(params[:username],
                       params[:map_id])
