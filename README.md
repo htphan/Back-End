@@ -4,7 +4,15 @@ Website: https://fierce-wave-2814.herokuapp.com/
 
 ## Table of Contents
 
-
+1. [Level Model](#level-model)
+	* [Levels Index](#levels-index)
+	* [Show a Level](#show-a-level)
+	* [Create a Level](#create-a-level)
+2. [Games Model](#games-model)
+	* [Games Scoreboard](#games-scoreboard)
+	* [Games Create](#games-create)
+	* [Show a Game](#show-a-game)
+	* [Update a Game](#update-a-game)
 
 ## **Level Model**
 
@@ -218,9 +226,9 @@ Code | Type | Description
 
 ## **Games Model**
 
-#### Games Index
+#### Games Scoreboard
 
-List of all games played.
+Displays a scoreboard sorted by top scores and its users.
 
 Path: 
 `GET '/games'`
@@ -239,15 +247,15 @@ Code | Type | Description
 ```
 [
   {
-		"username": "LilDebbie",
-		"score": 50,
-		"level_id": 1
-	}
-	{
-		"username": "LilDebbie",
-		"score": 50,
-		"level_id": 2
-	}
+    "username": "LilDebbie",
+    "score": 50,
+    "level_id": 1
+  },
+  {
+    "username": "ZebraCakes",
+    "score": 40,
+    "level_id": 2
+  }
 ]
 ```
 
@@ -276,15 +284,15 @@ Code | Type | Description
 ```
 [
   {
-		"username": "LilDebbie",
-		"score": 50,
-		"level_id": 1
-	}
-	{
-		"username": "KillerzKidz",
-		"score": 50,
-		"level_id": 2
-	}
+    "username": "LilDebbie",
+    "score": 50,
+    "level_id": 1
+  },
+  {
+    "username": "KillerzKidz",
+    "score": 50,
+    "level_id": 2
+  }
 ]
 ```
 
@@ -309,10 +317,10 @@ Code | Type | Description
 ```
 [
   {
-		"username": "LilDebbie",
-		"score": 50,
-		"level_id": 1
-	}
+    "username": "LilDebbie",
+    "score": 50,
+    "level_id": 1
+  }
 ]
 ```
 
@@ -341,9 +349,9 @@ Code | Type | Description
 ```
 [
   {
-		"username": "LilDebbie",
-		"score": 50,
-		"level_id": 1
-	}
+    "username": "LilDebbie",
+    "score": 50,
+    "level_id": 1
+  }
 ]
 ```
