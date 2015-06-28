@@ -19,19 +19,15 @@ class LevelsController < ApplicationController
       render json: { level: {id: @level.id, properties: properties} },
            status: :ok
     else
-      render json: { errors: @level.errors.full_messages },
+      render json: { errors: "No valid Level! Mwahaha" },
              status: :bad_request
     end
   end
 
   def index
     @level = Level.all
-    if @level
     render json: { level: @level.as_json(only: [:properties]) },
         status: :ok
-    else
-      render json: { errors: @level.errors.full_messages },
-             status: :bad_request
     end
   end
 
