@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post 'games/new', to: 'games#create'
   get 'game/score', to: 'games#score'
   post 'game/score/update', to: 'games#update'
+  get 'games', to: 'games#index'
 
   #for front end to create a new block in particular map aka level
   post 'blocks/new', to: 'blocks#new'

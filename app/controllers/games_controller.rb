@@ -31,6 +31,17 @@ class GamesController < ApplicationController
     end
   end
 
+  def index
+    @games = Game.all
+    if @games
+      render json: { level: @games.as_json(only: [:username, :score, :level_id]) },
+        status: :ok
+    else
+      render json: { errors: @games.errors.full_messages },
+        status: :bad_request
+    end
+  end
+
 
 
 end

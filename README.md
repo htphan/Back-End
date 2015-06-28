@@ -8,43 +8,155 @@ Website: https://fierce-wave-2814.herokuapp.com/
 
 ## **Level Model**
 
-## **Consultant Model**
+#### Levels Index
 
-#### Consultant Index
-List of all Consultants
+List of all levels.
 
-Path:
-`GET '/consultants'`
+Path: 
+`GET '/levels'`
 
-**Parameters**
+**Parameters** 
 *None*
 
-**Status Code**
+**Status Codes**
 
 Code | Type | Description
--- | -- | --
-200 | Success | All consultants were successfully returned.
-204 | Success | The server successfully processed the request, but not content was returned due to an empty database. 
+---|---|---
+200 | Success | Request was received and delivered successfully.
+400 | Error | Bad Request. Specified parameters do not match.
 
 **Example Response**
 ```
 [
   {
-    "name": "Junior Developer",
-    "cost": 100
-  },
-  {
-    "name": "Senior Developer",
-    "cost": 300
-  }
+  	"id": 1,
+		"properties": {
+		}
+	}
 ]
 ```
 
-#### Show Consultant
-Show a single consultant
+#### Show a Level
 
+Shows a single level.
 
+Path: 
+`GET '/levels/:id'`
 
+**Parameters** 
+*None*
+
+**Status Codes**
+
+Code | Type | Description
+---|---|---
+200 | Success | Request was received and delivered successfully.
+400 | Error | Bad Request. Specified parameters do not match.
+
+**Example Response**
+```
+[
+  {
+  	"id": 1,
+		"properties": {
+		}
+	}
+]
+```
+
+#### Create a Level
+
+Shows a single level.
+
+Path: 
+`POST '/levels/new'`
+
+**Parameters** 
+*None*
+
+**Status Codes**
+
+Code | Type | Description
+---|---|---
+200 | Success | Request was received and delivered successfully.
+422 | Error | Unprocessable Entry. Specified parameters are invalid.
+
+**Example Response**
+```
+[
+  {
+  	"id": 1,
+		"properties": {
+		}
+	}
+]
+```
 
 ## **Games Model**
+
+#### Games Index
+
+List of all games played.
+
+Path: 
+`GET '/games'`
+
+**Parameters** 
+*None*
+
+**Status Codes**
+
+Code | Type | Description
+---|---|---
+200 | Success | Request was received and delivered successfully.
+400 | Error | Bad Request. Specified parameters do not match.
+
+**Example Response**
+```
+[
+  {
+		"username": "LilDebbie",
+		"score": 50,
+		"level_id": 1
+	}
+	{
+		"username": "LilDebbie",
+		"score": 50,
+		"level_id": 1
+	}
+]
+```
+
+#### Games Create
+
+Create a game instance.
+
+Path: 
+`POST '/games/new'`
+
+**Parameters** 
+*None*
+
+**Status Codes**
+
+Code | Type | Description
+---|---|---
+200 | Success | Request was received and delivered successfully.
+400 | Error | Bad Request. Specified parameters do not match.
+
+**Example Response**
+```
+[
+  {
+		"username": "LilDebbie",
+		"score": 50,
+		"level_id": 1
+	}
+	{
+		"username": "LilDebbie",
+		"score": 50,
+		"level_id": 1
+	}
+]
+```
 
