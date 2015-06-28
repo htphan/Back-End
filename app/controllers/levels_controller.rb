@@ -14,9 +14,9 @@ class LevelsController < ApplicationController
 
   def show
     @level = Level.find_by(id: params[:id])
-    properties = eval(@level.properties)
     if @level
-    render json: { level: {id: @level.id, properties: properties} },
+      properties = eval(@level.properties)
+      render json: { level: {id: @level.id, properties: properties} },
            status: :ok
     else
       render json: { errors: @level.errors.full_messages },
