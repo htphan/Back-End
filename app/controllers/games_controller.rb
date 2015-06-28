@@ -2,7 +2,8 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(map_id: params[:map_id],
-                     username: params[:username])
+                     username: params[:username],
+                     score: params[:score])
 
     if @game
       render json: { game: @game.as_json(only: [:map_id, 
