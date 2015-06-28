@@ -181,7 +181,7 @@ Path:
 **Parameters** 
 
 Name | Type | Description
---- | --- | --
+--- | --- | ---
 properties | Text | **Required.** Includes all attributes of a the game peices (Name, Budget, Map).
 
 **Status Codes**
